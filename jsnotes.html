@@ -859,3 +859,313 @@ mallikharjun velama
  
 //  synchronous and asynchronous functions callbacks,
 // callbackhell issue, ==> promises, async/await
+<!-- ========================================================================= -->
+                           25-09-2024
+ <!-- ======================================================================== -->
+ mallikharjun velama
+ 4:24 PM
+ let arr=[0,1,0,2,0,3]
+ for(let i=0; i<arr.length; i++){
+     for(let j=i+1; j<arr.length; j++){
+         if(arr[i]<arr[j]){
+             let temp=arr[i]
+             arr[i]=arr[j]
+             arr[j]=temp
+         }
+     }
+ }
+ console.log(arr)
+ mallikharjun velama
+ 4:29 PM
+ let str="hello 123 world 456"
+ //579
+ str=str.split(" ")
+ let sum =0;
+ for(let i=0; i<str.length; i++){
+     let num = parseInt(str[i]);
+      !isNaN(num) ? sum +=num : 0
+ }
+ console.log(sum)
+ mallikharjun velama
+ 4:32 PM
+ let arr=[1,2,3,4];
+ //[8,10,11,12]
+ 
+ let result=[]
+ 
+ for(let i=0; i<arr.length; i++){
+     if(arr[i]>1){
+         result.push(arr[i]+8)
+     }else{
+         result.push(arr[i]+7)
+     }
+ }
+ console.log(result)
+ <!-- ================================================================ -->
+                              26-09-2024
+<!-- ================================================================= -->
+mallikharjun velama
+3:16 PM
+// function / normal function / regular function ==> logical group of one or more expressions
+
+// ways to write a function => 1.function declaration, 2.function expression, 3.arrow function
+//syntax for function
+
+// declaration functionName(parameters){
+// return    
+// }
+// invoke(arguments)
+
+// Function Declaration
+function some(a,b){
+     return a+b
+ }
+ let output = some(2,3)
+ console.log(output)
+ 
+ // Function Expression
+ 
+ let multiply=function(a,b){return a * b}
+ 
+ let output1 = multiply(4,5)
+ 
+ console.log(output1)
+ 
+ // Arrow Function (ES6 Feature)
+//  ==> it's denoted by ()=>
+ 
+ let subtract=(a,b)=> a-b 
+ let output2=subtract(5,3)
+ console.log(output2)
+// Anonymous function
+ 
+//  ==> anonymous function is a function , but it is not having any name (unNamed Function)
+
+let sum = function (a,b){
+    return a+b
+}
+let result = sum(6,7)
+console.log(result)
+
+// function named expression
+
+let add2= function addition(a,b){ return a+b}
+let result1=add2(7,8)
+console.log(result1);
+// IIFE (Immediate Invoke function expression)
+
+// ==> it will invoke immediately, purpose of IIFE is to prevent global variable issue
+var a=1000;
+(function (){
+    console.log(a)
+    var a=10;
+    console.log(a)
+})()
+
+// callback function
+//  ==> callback function is a function , and it will execute after actual function execution
+
+// HOF (Higher Ordered Function)
+//  ==> higher ordered function is a function, it will accepts function as an argument
+// ==> map, filter, find, reduce .etc...
+let arr=[1,2,3,4]
+
+let count= arr.map((item)=>{ 
+console.log(item);
+return item * 2})
+console.log(count)
+
+// Currying
+
+// ==> it's new way technique to write function with multiple arguments into sequence of function
+
+// normal function syntax
+
+function addition1(a,b){
+    return a+b
+}
+let res=addition1(6,7)
+console.log(res);
+
+// currying syntax
+
+function additionCurr(a){
+    return function (b){
+        return a+b
+    }
+}
+let res1=additionCurr(8)(9)
+console.log(res1)
+mallikharjun velama
+3:17 PM
+//First Class Function
+// ==> everything in javascript is a function
+// ==> functions are heart of javascript
+// ==> function we can able to write inside a function
+// ==> we can able to assign function as an value to any variable
+// ==> we can able to pass function as an argument
+
+
+// equality definitions
+
+//      = means assigning value;
+//     == means comparing value;
+//    === means comparing both type and value;
+ 
+ 
+//  synchronous and asynchronous functions callbacks,
+// callbackhell issue, ==> promises, async/await
+<!-- ========================================================== -->
+                        01-10-2024
+<!-- ============================================================ -->
+let arr=[5,2,4,3,1,2]
+// output=[5,-1,4,3,-1,2]
+let output=[]
+for(let i=0; i<arr.length; i++){
+  if(arr[i]>arr[i+1] || i===arr.length-1){
+    output.push(arr[i])
+  }else{
+    output.push(-1)
+  }
+}
+console.log(output)
+================================================
+let arr=[1,2,3,4,5,5,4,3,2]
+//        output=[1,2,3,4,5]
+    let output = arr.filter((item,index)=>{
+    return arr.indexOf(item)===index
+  })
+console.log(output)
+============================================================================
+let arr=[1,2,3,4,5,5,4,3,2]
+//        output=[1,2,3,4,5]
+    let output = arr.filter((item,index)=>{
+    return arr.indexOf(item)===index
+  })
+console.log(output)
+========================================================s
+       
+        
+let arr=[1,2,3,4,5,6,7,8]
+  output=[8,2,3,4,5,6,7,1]
+  
+// let str="hello 123 world 456"
+//   output=-579
+  
+// let arr=[1,2,3,4,5,5,4,3,2]
+//        output=[1,2,3,4,5]
+       
+// let arr=[5,2,4,3,1,2]
+// output=[5,-1,4,3,-1,2]
+  let str="hello 123 world 456"
+  output=-579
+  str=str.split(" ")
+//   console.log(str)
+  let sum=0;
+
+  for(let i=0;i<str.length;i++){
+    let num=Number(str[i])
+//     console.log(num)
+    !isNaN(num) ? sum=sum-num:0
+//     console.log(sum) 
+  }
+console.log(sum)
+
+
+ let arr=[1,2,3,4,5,5,4,3,2]
+//        output=[1,2,3,4,5]
+  
+<!-- ========================================================= -->
+                            02-10-2024
+  <!-- ========================================================= -->
+  // iterator methods ==> map, filter, find, reduce, some, every
+
+  // ==> single dependency ==> map, filter, find, some, every
+  
+  //  ==> double dependency ==> reduce
+  
+  // HOF [Higher Ordered Function] ==> HOF is a function , it will take function as an argument 
+  
+  
+  // ==> map ==> it's an higher order function , it will iterates each and every value  and it will returns each and every value in the array, it will creates brand new array
+      //  purpose of map ==> to print each and every value from the array, to manupulate/modify each and every value in the array
+      
+  // ==> filter ==> it's an higher order function , it will iterates each and every value and based upon condition it will return all the values which are satisfied by the condition
+  
+  // ==> find ==> it's an higher order function , it will iterates each and every value and based upon condition it will return initial value which is satisfied by the taken condition
+  
+  // ==> some ==> it will iterates each and every value and based upon the condition it will gives true or false 
+  // note : atleast one elemnet satisfies the condition then it will returns true if not it will gives false
+  
+  //  ==> every ==> it will iterates each and every value and based upon the condition it will gives true or false 
+    // note : if each and every elemnet  satisfies the condition then it will returns true if not it will gives false  
+    
+  // ==> reduce ==>  it's an higher order function , it will iterates each and every value and it always gives the single value, in reduce method it will accepts two arguments one is callback function and another one is dependency value
+  
+  //   syntax==> arrayname.reduce((acc,curr, index, self)=>{},0)
+  
+  // ==> acc => it denotes second dependency
+  // ==> curr ==> it denotes values
+  
+  //  note ==> if you perform count operation second dependency is 0
+          //  ==> if you want data in array format second dependency is []
+          //  ==> if you want data in object format second dependency is {}
+          //  ==> by default it is 0
+    
+  //  indexOf ==> it will iterates each and every value, it will checks the index of elemenet , it will only gives first index of the element
+  
+  // let arr=[6,7,8,6,4,6,5,6,3,2]
+  // let duplicate = [...new Set(arr)]
+  // let duplicate=arr.filter((item, index, self)=>{
+  //     return self.indexOf(item)  === index
+  // })
+  
+  // // let result=arr.filter((item, index, self)=>{
+  // // return arr.indexOf(item)
+  // // })
+  // console.log(duplicate)
+  
+  // lastIndexOf==> it will iterates each and every value,it will checks the index of elemenet , it will only gives last index of the element
+  
+  //  includes ==> it will iterates each and every value and if the element is there what ewe are looking in the array then it will gives true, otherwise it will gives false
+      
+  
+  // indexOf, lastIndexOf, includes
+  
+  
+  // forEach ==> it will iterates each and every value, this in not introduced in ES6 , this is introduced in older version of Ecma Script
+  
+  
+  // promise ==> it will handles asynchronous tasks and it will resolve callback hell issue
+  
+  let examplePromise=new Promise((pending, resolve, reject)=>{
+      let a="hello";
+      
+      if(a="hello"){
+           
+          setTimeout(()=>{
+             resolve("matched string")
+          },100)
+      }
+      else{
+          reject("rejected cause of misMatch  string")
+      }
+  })
+  examplePromise 
+  .then((message)=> console.log(${message}))
+  .catch((error)=> console.log(${error}))
+  // async/await
+  let getData =async()=>{
+      try{
+              let api = await fetch("https://jsonplaceholde.typicode.com/users")
+      let response = await api.json()
+      setData(response)
+      }
+  // polyFills 
+  
+  
+  
+  // promise.all()
+  // promise.allSetteled()
+  // promise.any()
+  // promise.race()
