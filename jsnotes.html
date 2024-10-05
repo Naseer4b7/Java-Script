@@ -748,25 +748,25 @@ console.log(gender);//"male"
 ============== 26-09-2024===============================================================================
 
 
-mallikharjun velama
-3:16 PM
-// function / normal function / regular function ==> logical group of one or more expressions
-
+<!-- ---------------------------------------------------------------------------------------------- -->
+function / normal function / regular function ==> logical group of one or more expressions
+<!-- ------------------------------------------------------------------------------------ -->
 // ways to write a function => 1.function declaration, 2.function expression, 3.arrow function
+==========================================================================================================
 //syntax for function
 
 // declaration functionName(parameters){
 // return    
 // }
 // invoke(arguments)
-
+=============================================================================================================
 // Function Declaration
 function some(a,b){
      return a+b
  }
  let output = some(2,3)
  console.log(output)
- 
+ ==================================   XXXXXXXXXXXXXXXXXX=======================================================
  // Function Expression
  
  let multiply=function(a,b){return a * b}
@@ -774,13 +774,14 @@ function some(a,b){
  let output1 = multiply(4,5)
  
  console.log(output1)
- 
+ =====================================XXXXXXXXXXXXXXXXXXXXX======================================================
  // Arrow Function (ES6 Feature)
 //  ==> it's denoted by ()=>
  
  let subtract=(a,b)=> a-b 
  let output2=subtract(5,3)
  console.log(output2)
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 // Anonymous function
  
 //  ==> anonymous function is a function , but it is not having any name (unNamed Function)
@@ -790,12 +791,13 @@ let sum = function (a,b){
 }
 let result = sum(6,7)
 console.log(result)
-
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 // function named expression
 
 let add2= function addition(a,b){ return a+b}
 let result1=add2(7,8)
 console.log(result1);
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 // IIFE (Immediate Invoke function expression)
 
 // ==> it will invoke immediately, purpose of IIFE is to prevent global variable issue
@@ -805,20 +807,21 @@ var a=1000;
     var a=10;
     console.log(a)
 })()
-
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 // callback function
 //  ==> callback function is a function , and it will execute after actual function execution
-
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 // HOF (Higher Ordered Function)
 //  ==> higher ordered function is a function, it will accepts function as an argument
 // ==> map, filter, find, reduce .etc...
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 let arr=[1,2,3,4]
 
 let count= arr.map((item)=>{ 
 console.log(item);
 return item * 2})
 console.log(count)
-
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 // Currying
 
 // ==> it's new way technique to write function with multiple arguments into sequence of function
@@ -830,7 +833,7 @@ function addition1(a,b){
 }
 let res=addition1(6,7)
 console.log(res);
-
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 // currying syntax
 
 function additionCurr(a){
@@ -840,8 +843,7 @@ function additionCurr(a){
 }
 let res1=additionCurr(8)(9)
 console.log(res1)
-mallikharjun velama
-3:17 PM
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 //First Class Function
 // ==> everything in javascript is a function
 // ==> functions are heart of javascript
@@ -849,7 +851,7 @@ mallikharjun velama
 // ==> we can able to assign function as an value to any variable
 // ==> we can able to pass function as an argument
 
-
+======================================XXXXXXXXXXXXXXXXXXXXX======================================================
 // equality definitions
 
 //      = means assigning value;
@@ -1079,31 +1081,31 @@ console.log(sum)
                             02-10-2024
   <!-- ========================================================= -->
   // iterator methods ==> map, filter, find, reduce, some, every
-
+---------------------------------------------------------------------------------------------------------
   // ==> single dependency ==> map, filter, find, some, every
-  
+  -------------------------------------------------------------------------------------------------------------
   //  ==> double dependency ==> reduce
-  
+  ------------------------------------------------------------------------------------------------
   // HOF [Higher Ordered Function] ==> HOF is a function , it will take function as an argument 
+  -----------------------------------------------------------------------------------------------------------------
   
-  
-  // ==> map ==> it's an higher order function , it will iterates each and every value  and it will returns each and every value in the array, it will creates brand new array
+  // ==> MAP==> it's an higher order function , it will iterates each and every value  and it will returns each and every value in the array, it will creates brand new array
       //  purpose of map ==> to print each and every value from the array, to manupulate/modify each and every value in the array
-      
+      -------------------------------------------------------------------------------------------------------
   // ==> filter ==> it's an higher order function , it will iterates each and every value and based upon condition it will return all the values which are satisfied by the condition
-  
+  ---------------------------------------------------------------------------------------------------------------------
   // ==> find ==> it's an higher order function , it will iterates each and every value and based upon condition it will return initial value which is satisfied by the taken condition
-  
+  -----------------------------------------------------------------------------------------------------------------------
   // ==> some ==> it will iterates each and every value and based upon the condition it will gives true or false 
   // note : atleast one elemnet satisfies the condition then it will returns true if not it will gives false
-  
+  ----------------------------------------------------------------------------------------------------------------
   //  ==> every ==> it will iterates each and every value and based upon the condition it will gives true or false 
     // note : if each and every elemnet  satisfies the condition then it will returns true if not it will gives false  
-    
+    --------------------------------------------------------------------------------------------------
   // ==> reduce ==>  it's an higher order function , it will iterates each and every value and it always gives the single value, in reduce method it will accepts two arguments one is callback function and another one is dependency value
-  
+  ------------------------------------------------------------------------------------------------------
   //   syntax==> arrayname.reduce((acc,curr, index, self)=>{},0)
-  
+  ---------------------------------------------------------------------
   // ==> acc => it denotes second dependency
   // ==> curr ==> it denotes values
   
@@ -1111,7 +1113,7 @@ console.log(sum)
           //  ==> if you want data in array format second dependency is []
           //  ==> if you want data in object format second dependency is {}
           //  ==> by default it is 0
-    
+          ======================================XXXXXXXXXXXXXXXXXXXXX======================================================
   //  indexOf ==> it will iterates each and every value, it will checks the index of elemenet , it will only gives first index of the element
   
   // let arr=[6,7,8,6,4,6,5,6,3,2]
